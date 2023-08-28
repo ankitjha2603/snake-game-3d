@@ -1,0 +1,130 @@
+body {
+    overflow: hidden;
+    margin: 0px;
+}
+
+.info {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 1;
+    font-size: 1.2em;
+    user-select: none;
+    cursor: help;
+}
+
+.dinfo {
+    background-color: #808080;
+    padding: 2px 7px;
+    margin: 5px 5px;
+    border-radius: 4px;
+    cursor: help;
+}
+
+.dinfo[status="not-started"] {
+    opacity: 0.25;
+}
+
+.dinfo[status="game"] {
+    opacity: 1;
+}
+
+.dinfo[status="pause"] {
+    opacity: 0.5;
+}
+
+.score {
+    background-color: #808080;
+    padding: 2px 7px;
+    margin: 5px 5px;
+    border-radius: 4px;
+    -transition: background-color 20s, padding 20s, margin 20s, border-radius 20s, transform 20s;
+}
+
+.end-score {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    font-size: 3em;
+    padding: 30px 60px;
+    color: green;
+    border: 2px solid;
+    border-radius: 8px;
+}
+
+.grey {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vw;
+    width: 100vw;
+    background-color: #8888887a;
+    z-index: 1;
+}
+
+
+.only-laptop-info-black-screen {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.only-laptop-info {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    padding: 30px 60px;
+    color: red;
+    border: 4px solid chartreuse;
+    border-radius: 8px;
+}
+
+.only-laptop-info,
+.only-laptop-info-black-screen {
+    position: fixed;
+    display: none;
+    user-select: none;
+    z-index: 100;
+}
+
+.only-laptop-text {
+    color: red;
+    font-size: 1.5em;
+}
+
+.project-link {
+    z-index: 100;
+    color: #000;
+    background: #fff;
+    padding: 6px 20px 6px 15px;
+    font-size: 1em;
+    text-decoration: none;
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    display: flex;
+}
+
+svg {
+    margin-right: 5px;
+}
+
+@media (min-width: 768px) {
+
+    .only-laptop-info,
+    .only-laptop-info-black-screen {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .only-laptop-info,
+    .only-laptop-info-black-screen {
+        display: block !important;
+    }
+}

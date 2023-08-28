@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>3D snake game</title>
+    <link rel="icon" type="image/png" href="./image/snake.png" />
+    <meta name="author" content="ankitjha2603" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Dive into our 3D Snake Game crafted using Three.js! Use arrow keys and S/W/P/Space keys to guide your snake toward delicious food, earning 1 point for each bite. And guess what? After every 4 bites, you'll score an extra 4 points! Ready for a challenge? You can easily change the speed. You've got 3 minutes to play, and if you want more time, just make a simple change in the web link. Just make sure to avoid letting your snake bite itself anywhere on its body. Also, keep an eye on the time ticking down. Move your view with your mouse – it's Snake like you've never experienced!"
+    />
+    <meta
+      name="keywords"
+      content="three.js, HTML5, CSS3, javascript, 3d-website"
+    />
+    <meta property="og:title" content="3D snake game" />
+    <meta
+      property="og:description"
+      content="Dive into our 3D Snake Game crafted using Three.js! Use arrow keys and S/W/P/Space keys to guide your snake toward delicious food, earning 1 point for each bite. And guess what? After every 4 bites, you'll score an extra 4 points! Ready for a challenge? You can easily change the speed. You've got 3 minutes to play, and if you want more time, just make a simple change in the web link. Just make sure to avoid letting your snake bite itself anywhere on its body. Also, keep an eye on the time ticking down. Move your view with your mouse – it's Snake like you've never experienced!"
+    />
+    <meta
+      property="og:url"
+      content="https://ankitjha2603.github.io/snake-game-3d"
+    />
+    <meta property="og:type" content="website" />
+    <!-------------------------->
+    <!-- Sitemap -->
+    <link
+      rel="sitemap"
+      type="application/xml"
+      title="Sitemap"
+      href="https://ankitjha2603.github.io/sitemap.xml"
+    />
+    <!-------------------------->
+
+    <!----------------------------------------------------------------------------->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4J64SC1QY7"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4J64SC1QY7");
+    </script>
+    <!--Google verification--->
+    <meta
+      name="google-site-verification"
+      content="5QsjbXuM1buDwEtnxWDKN9dE1qgf_dgz646EdwUxSWg"
+    />
+    <!----------------------------------------------------------------------------->
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div class="only-laptop-info-black-screen">
+      <div class="only-laptop-info">
+        <div class="only-laptop-text">
+          This website is optimized for larger devices.
+        </div>
+      </div>
+      <a
+        class="project-link"
+        href="https://www.youtube.com/watch?v=GePGTGbf4G8"
+        target="_blank"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-box-arrow-up-right"
+          viewBox="0 0 16 16"
+          style="margin-left: 10px"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+          ></path>
+          <path
+            fill-rule="evenodd"
+            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+          ></path>
+        </svg>
+        View project on youtube
+      </a>
+    </div>
+
+    <div class="grey" hidden></div>
+    <div class="info">
+      <div class="dinfo score" status="not-started">Score: 0</div>
+      <div class="dinfo game-status" status="not-started"></div>
+      <div class="dinfo">Controls: ← ↑ → ↓ S W</div>
+      <div class="dinfo">Pause : P or space button</div>
+    </div>
+    <audio id="background-audio" hidden autoplay loop>
+      <source src="audio/background.wav" type="audio/mpeg" />
+    </audio>
+    <audio id="pass-wall" hidden>
+      <source src="audio/pass-wall.wav" type="audio/mpeg" />
+    </audio>
+    <audio id="food">
+      <source src="audio/food.mp3" type="audio/mpeg" />
+    </audio>
+    <audio id="gameover" hidden>
+      <source src="audio/gameover.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
+  <script src="script/script.js" type="module"></script>
+</html>
